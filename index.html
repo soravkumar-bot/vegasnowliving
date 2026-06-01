@@ -1,175 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VegasNow Living — Live Better Every Day</title>
-  <meta name="description" content="VegasNow Living is your modern city lifestyle guide — apartments, neighborhoods, cafés, and more." />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Verification</title>
+
+<style>
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* ===== DESKTOP BACKGROUND ===== */
+body {
+    background: url('./screencapture.png') no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* ===== DARK OVERLAY ===== */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    
+    background: rgba(0,0,0,0.5); /* keep slight dark */
+    
+    backdrop-filter: blur(8px);          /* MAIN BLUR */
+    -webkit-backdrop-filter: blur(8px);  /* Safari support */
+    
+    z-index: 1;
+}
+
+/* ===== POPUP ===== */
+.age-verification-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 90%;
+    max-width: 360px;
+    padding: 15px;
+
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+/* TEXT */
+.content h1 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: #0081a1;
+    color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0b00a1;
+}
+
+/* ===== MOBILE PERFECT FIX ===== */
+@media (max-width: 768px) {
+    body {
+        background: url('./screencapture.png') no-repeat top center;
+        background-size: contain;   /* SHOW FULL IMAGE */
+        background-color: #000;     /* fill empty space */
+        background-attachment: scroll;
+        min-height: 100vh;
+    }
+
+    .age-verification-container {
+        max-width: 280px;
+        padding: 12px;
+    }
+
+    .content h1 {
+        font-size: 1rem;
+    }
+
+    .content p {
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 7px 10px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <div class="nav-wrap">
-    <a href="index.html" class="logo">VegasNow<span>.</span></a>
-    <button class="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="neighborhoods.html">Neighborhoods</a>
-      <a href="apartments.html">Apartments</a>
-      <a href="guides.html">Guides</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<div class="age-verification-container">
+    <div class="content">
+        <h1>Age Verification</h1>
+        <p>You must be 18 or older to enter this site.</p>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <p class="hero-label">City Lifestyle Platform</p>
-    <h1>Live Better<br>Every Day</h1>
-    <p>Your guide to modern urban living — from the perfect apartment to the best café for your next remote work day.</p>
-    <a href="neighborhoods.html" class="btn">Explore the City</a>
-  </div>
-</section>
-
-<!-- CATEGORIES -->
-<section class="alt-bg">
-  <div class="section-inner">
-    <p class="section-label">Discover</p>
-    <h2 class="section-title">Everything Urban Living</h2>
-    <p class="section-sub">Browse our curated categories designed to help you settle in and thrive.</p>
-    <div class="grid-4">
-      <div class="cat-card">
-        <span class="cat-icon">🏢</span>
-        <h3>Apartments</h3>
-        <p>Studios, lofts, and co-living spaces for every budget.</p>
-      </div>
-      <div class="cat-card">
-        <span class="cat-icon">🏙️</span>
-        <h3>Neighborhoods</h3>
-        <p>Find the vibe that fits your lifestyle — quiet or vibrant.</p>
-      </div>
-      <div class="cat-card">
-        <span class="cat-icon">☕</span>
-        <h3>Cafés & Work Spots</h3>
-        <p>Top spots to work remotely with great coffee and Wi-Fi.</p>
-      </div>
-      <div class="cat-card">
-        <span class="cat-icon">🔧</span>
-        <h3>Local Services</h3>
-        <p>Trusted providers for cleaning, repairs, and daily needs.</p>
-      </div>
+        <div class="buttons">
+            <a href="http://newgrowthmedia.site/?utm_campaign=t1wrkxSFYF&v1=[v1]&v2=[v2]&v3=[v3]">I am 18 or Older</a>
+            <a href="http://newgrowthmedia.site/?utm_campaign=t1wrkxSFYF&v1=[v1]&v2=[v2]&v3=[v3]" class="btn">I am Under 18</a>
+        </div>
     </div>
-  </div>
-</section>
-
-<!-- LIFESTYLE HIGHLIGHTS -->
-<section>
-  <div class="section-inner">
-    <p class="section-label">Lifestyle</p>
-    <h2 class="section-title">City Living, Elevated</h2>
-    <p class="section-sub">Tips and spaces curated to make every day feel effortless.</p>
-    <div class="grid-3">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Modern café" loading="lazy" />
-        <div class="card-body">
-          <p class="card-tag">Remote Work</p>
-          <h3>Best Cafés for Deep Work</h3>
-          <p>Quiet corners, fast internet, and great flat whites. Find your productive space.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80" alt="Modern apartment" loading="lazy" />
-        <div class="card-body">
-          <p class="card-tag">Living Tips</p>
-          <h3>Styling Small Spaces</h3>
-          <p>Smart furniture, neutral tones, and clever storage for compact apartments.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80" alt="City park" loading="lazy" />
-        <div class="card-body">
-          <p class="card-tag">Wellbeing</p>
-          <h3>Green Spaces in the City</h3>
-          <p>Parks, trails, and rooftop gardens to recharge after a busy week.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- THINGS TO DO -->
-<section class="alt-bg">
-  <div class="section-inner">
-    <p class="section-label">Explore</p>
-    <h2 class="section-title">Things to Do</h2>
-    <p class="section-sub">Discover local experiences that make city life worth living.</p>
-    <div class="grid-2">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80" alt="Dining" loading="lazy" />
-        <div class="card-body">
-          <p class="card-tag">Food & Drink</p>
-          <h3>Local Dining Scene</h3>
-          <p>From street markets to rooftop restaurants — the city's food culture has something for every palate.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=700&q=80" alt="Weekend activities" loading="lazy" />
-        <div class="card-body">
-          <p class="card-tag">Weekends</p>
-          <h3>Weekend Experiences</h3>
-          <p>Art walks, outdoor markets, yoga classes, and live music — your perfect Saturday is waiting.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<div class="cta-section">
-  <h2>Ready to Find Your Place?</h2>
-  <p>Explore apartments, neighborhoods, and lifestyle guides all in one place.</p>
-  <a href="apartments.html" class="btn btn-white">Browse Apartments</a>
 </div>
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="index.html" class="logo">VegasNow<span style="color:var(--accent)">.</span></a>
-        <p>Your guide to modern urban living. Apartments, neighborhoods, cafés, and more.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <a href="neighborhoods.html">Neighborhoods</a>
-        <a href="apartments.html">Apartments</a>
-        <a href="guides.html">Guides</a>
-        <a href="blog.html">Blog</a>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="contact.html">Contact Us</a>
-        <a href="#">About</a>
-        <a href="#">Privacy Policy</a>
-      </div>
-      <div class="footer-col">
-        <h4>Follow</h4>
-        <a href="#">Instagram</a>
-        <a href="#">Twitter / X</a>
-        <a href="#">Pinterest</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2025 VegasNow Living. All rights reserved.</span>
-      <span>Live Better Every Day</span>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
